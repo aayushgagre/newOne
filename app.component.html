@@ -1,0 +1,30 @@
+﻿<div class="jumbotron">
+<h2 ><div class="badge badge-primary text-wrap" style="width: 20rem;">Mode of Transaction</div></h2>
+<form #payForm="ngForm" (ngSubmit)="addData()" ><br>
+<div class="form-group row">
+   
+    <div class="col-sm-10" style="padding-left: 50px; padding-right: 50px;">
+
+        <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="payStore" name="payment" value="credit_debitcard" id="on1" #cardControl="ngModel" required>
+        <label class="form-check-label" for="on1">
+        Credit/Debit Card
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="payStore" name="payment" value="Onlinebanking" id="on2" #onlineControl="ngModel" required>
+        <label class="form-check-label" for="on2">
+        Online Banking
+        </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="radio" [(ngModel)]="payStore" name="payment" value="Cashondelivery" id="on3" #cashondelControl="ngModel" required>
+        <label class="form-check-label" for="on3">
+        Cash on Delivery
+        </label>
+        </div>
+    </div>
+</div>
+<div> <input type="submit" class="btn btn-primary" value="submit" [disabled]="payForm.invalid"  /></div>
+</form>                     
+</div>
